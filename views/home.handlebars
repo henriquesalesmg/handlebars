@@ -1,0 +1,36 @@
+<h1>Olá, Handlebars!</h1>
+<p>O nome do usuário é {{user.name}} {{user.surname}}</p>
+
+<hr>
+
+
+<br>
+<h4>Else if</h4>
+{{#if auth}}
+    <p>Condição verdadeira, if exibido!</p>
+{{else}}
+    <p>Condição falsa, else exibido!</p>
+{{/if}}
+<br>
+<hr>
+<h4>Iteração each</h4>
+<ul>
+    {{#each items as |item|}}
+        <li>{{item}}</li>
+    {{/each}}
+</ul>
+<br>
+<hr>
+<h4>Uso do "With"</h4>
+{{#with post}}
+    <h5>{{title}}</h5>
+    <p>{{category}}</p>
+    <p>{{body}}</p>
+    <p>N° de comentários: {{comments}}</p>
+{{/with}}
+<br>
+<hr>
+<h4>Uso de Partials</h4>
+{{#each news}}
+    {{> news}}
+{{/each}}
